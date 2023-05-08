@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ProductDoWhile {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+        int product = 1;
+        int count = 0;
+
+        do {
+            System.out.print("Introduce un número entero positivo: ");
+            num = sc.nextInt();
+
+            if (num > 0) {
+                product *= num;
+                count++;
+            }
+        } while (num > 0);
+
+        if (count == 0) {
+            product = 1;
+        }
+
+        System.out.println("El producto de los " + count + " números introducidos es: " + product);
+        sc.close();
+    }
+}
